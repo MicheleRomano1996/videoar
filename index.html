@@ -20,11 +20,12 @@
             gesture-detector
         >
         	<a-assets>
-            	<video src="mov_bbb.mp4"
+            	<video
+            	id="vid"  
+            	src="mov_bbb.mp4"
                 preload="auto" 
-                id="vid" 
                 response-type="arraybuffer" 
-                loop 
+                loop = 'true'
                 crossorigin="anonymous"
                 webkit-playsinline autoplay muted playsinline>
             	</video>
@@ -41,9 +42,7 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
-            <a-entity id="sphere">
-            	<a-videosphere src="#vid" rotation="0 180 0"></a-videosphere>
-            </a-entity>
+            <a-video src="#vid" width='8' height='4.5' position ='0 3 -9'></a-video>
 
                 <!-- <a-entity
                     id="bowser-model"
